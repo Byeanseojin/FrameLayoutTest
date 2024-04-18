@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FrameLayoutTest</string>
+    <string name="melody1">귀여운마멜</string>
+    <string name="melody2">뽀짝한마멜</string>
+    <string name="melody3">예쁘니마멜</string>
+</resources>
