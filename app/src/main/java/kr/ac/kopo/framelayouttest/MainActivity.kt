@@ -2,6 +2,8 @@ package kr.ac.kopo.framelayouttest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.View.OnClickListener
 import android.widget.Button
 import android.widget.ImageView
 
@@ -23,5 +25,22 @@ class MainActivity : AppCompatActivity() {
         imgv1 = findViewById<ImageView>(R.id.imgv1)
         imgv2 = findViewById<ImageView>(R.id.imgv2)
         imgv3 = findViewById<ImageView>(R.id.imgv3)
+
+        imgv2.visibility = View.INVISIBLE
+        imgv3.visibility = View.INVISIBLE
+
+        btn1.setOnClickListener(btnListner)
+        btn2.setOnClickListener(btnListner)
+        btn3.setOnClickListener(btnListner)
+    }
+    val btnListner = OnClickListener{
+        imgv1.visibility = View.INVISIBLE
+        imgv2.visibility = View.INVISIBLE
+        imgv3.visibility = View.INVISIBLE
+        when(it.id){
+            R.id.btn1->imgv1.visibility=View.VISIBLE
+            R.id.btn2->imgv2.visibility=View.VISIBLE
+            R.id.btn3->imgv3.visibility=View.VISIBLE
+        }
     }
 }
